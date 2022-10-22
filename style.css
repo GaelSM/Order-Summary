@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Bright-blue-hover: hsla(245, 75%, 52%, 0.616);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order_conainer{
+  width: 20.625em;
+  height: 35.625em;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 1em;
+  box-shadow: -1px 8px 8px 0px rgba(0, 0, 0, 0.1);
+  margin: 1.2em;
+}
+
+.picture{
+  height: 10em;
+  background-image: url("./images/illustration-hero.svg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.content{
+  padding: 2.5em 1.5625em;
+  height: 100%;
+  color: var(--Desaturated-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  font-size: 1em;
+}
+
+.content h1{
+  font-size: 1.25em;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+  text-align: center;
+}
+
+.content p{
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+.content .annual-plan{
+  background-color: var(--Very-pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 1em;
+  font-size: .9em;
+}
+
+.content .annual-plan p{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1em;
+}
+
+.content .annual-plan p span{
+  font-weight: 900;
+  color: var(--Dark-blue);
+}
+
+.content .annual-plan .change{
+  text-decoration: underline;
+  font-weight: 900;
+  color: var(--Bright-blue);
+  transition: color .5s;
+}
+
+.content .annual-plan .change:hover{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--Desaturated-blue);
+}
+
+.content button{
+  padding: 1.1em 0;
+  border-radius: .7em;
+  border: none;
+  font-weight: 700;
+  background-color: var(--Bright-blue);
+  color: #fff;
+  font-size: .95em;
+  box-shadow: -2px 12px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color .5s;
+}
+
+.content button:hover{
+  cursor: pointer;
+  background-color: var(--Bright-blue-hover);
+}
+
+.content .cancel-order{
+  font-weight: 900;
+  transition: color .5s;
+  font-size: .9em;
+}
+
+.content .cancel-order:hover{
+  cursor: pointer;
+  color: var(--Dark-blue);
+}
+
+@media screen and (max-width: 750px){
+  body{
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+}
